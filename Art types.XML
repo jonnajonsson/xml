@@ -1,0 +1,98 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix art: <https://www.getty.edu/research/tools/vocabularies/aat/index.html>.
+
+# AAT Thesaurus
+art:ArtAndArchitectureThesaurus a skos:ConceptScheme ;
+  dc:title "Art and Architecture Thesaurus"@en ;
+  skos:hasTopConcept art:ArtGenres ;
+  skos:hasTopConcept art:MaterialsTechniqueDescriptionHierarchy ;
+  skos:hasTopConcept art:StylesAndPeriods.
+
+# Art Genres Hierarchy
+art:ArtGenres a skos:Concept ;
+  skos:prefLabel "Art Genres"@en ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300056462> .
+
+# Concepts for Art Genres Hierarchy
+art:sculpture a skos:Concept ;
+  skos:prefLabel "Sculpture (Visual Works)"@en ;
+  skos:broader art:ArtGenresHierarchy ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300047090> .
+
+art:fountains a skos:Concept ;
+  skos:prefLabel "Fountains"@en ;
+  skos:broader art:ArtGenresHierarchy ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300006179> .
+
+art:monuments a skos:Concept ;
+  skos:prefLabel "Monuments"@en ;
+  skos:broader art:ArtGenresHierarchy ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300006958> .
+
+art:statues a skos:Concept ;
+  skos:prefLabel "Statues"@en ;
+  skos:broader art:ArtGenresHierarchy ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300047600> .
+
+# Materials Technique Description Hierarchy
+art:MaterialsTechniqueDescriptionHierarchy a skos:Concept ;
+  skos:prefLabel "MaterialsTechniqueDescription"@en ;
+  skos:inScheme art:ArtAndArchitectureThesaurus ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300435429> .
+
+# Concepts for Materials Technique Description
+art:OrganicMaterial a skos:Concept ;
+  skos:prefLabel "Organic Material"@en ;
+  skos:broader art:MaterialsTechniqueDescriptionHierarchy ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300011792> .
+
+art:wood a skos:Concept ;
+  skos:prefLabel "Wood (Plant Material)"@en ;
+  skos:broader art:OrganicMaterial ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300011914> ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
+
+art:InorganicMaterial a skos:Concept ;
+  skos:prefLabel "Inorganic Material"@en ;
+  skos:broader art:MaterialsTechniqueDescriptionHierarchy ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300010360> ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
+
+art:Metal a skos:Concept ;
+  skos:prefLabel "Metal"@en ;
+  skos:broader art:InorganicMaterial ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300010900> ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
+
+art:Stone a skos:Concept ;
+  skos:prefLabel "Stone (Worked Rock)"@en ;
+  skos:broader art:InorganicMaterial ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300011176> ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
+
+art:Plastic a skos:Concept ;
+  skos:prefLabel "Plastic (Material)"@en ;
+  skos:broader art:InorganicMaterial ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300014570> ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
+
+# Styles and Periods Hierarchy
+art:StylesAndPeriods a skos:Concept ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300015646> ;
+  skos:prefLabel "Styles and Periods (Hierarchy Name)"@en ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
+
+# Concepts for Styles and Periods Hierarchy
+art:Surrealist a skos:Concept ;
+  skos:prefLabel "Surrealist"@en ;
+  skos:broader art:StylesAndPeriods ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300021512> ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
+
+art:Impressionist a skos:Concept ;
+  skos:prefLabel "Impressionist (Style)"@en ;
+  skos:broader art:StylesAndPeriods ;
+  skos:exactMatch <http://vocab.getty.edu/page/aat/300021503> ;
+  skos:inScheme art:ArtAndArchitectureThesaurus .
